@@ -2,6 +2,12 @@
 {
 
     /// <summary>
+    /// Test values for testing the various Fibonacci functions.
+    /// </summary>
+    public static int[] testValues = { 3, 10, 20 };
+
+
+    /// <summary>
     /// FibClassic calculates the nth Fibonacci number using a recursive
     /// algorithm.
     /// </summary>
@@ -84,16 +90,18 @@
     /// <param name="args">command line arguments; not used here</param>
     public static void Main(string[] args)
     {
-        int[] testValues = { 3, 10, 20 };
+        // int[] testValues = { 3, 10, 20 };
 
         Console.WriteLine("Fibonacci Classic:");
         for (int i = 0; i < testValues.Length; i++)
         {
             int counter = 0;
+
             Console.WriteLine("FibClassic for n = " + testValues[i] + ": "
                 + FibClassic(testValues[i], ref counter) + ", " + counter + " adds.");
         }
 
+        // put some whitespace
         Console.Write("\n");
 
         Console.WriteLine("Fibonacci Iterative:");
@@ -104,6 +112,7 @@
                 + FibIterative(testValues[i], ref counter) + ", " + counter + " adds.");
         }
 
+        // put some whitespace!
         Console.Write("\n");
 
         Console.WriteLine("Fibonacci Recursive with Accumulator:");
